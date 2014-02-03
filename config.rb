@@ -1,7 +1,34 @@
+activate :sprocket
+###
+## Blog settings
+####
+
+Time.zone = "Asia/Shanghai"
+
+activate :blog do |blog|
+  blog.prefix = "/cn"
+  blog.permalink = ":year/:month/:day/:title.html"
+  blog.sources = ":year-:month-:day-:title.html"
+  blog.taglink = "tags/:tag.html"
+  blog.layout = "article"
+  blog.summary_separator = /(READMORE)/
+  blog.summary_length = 250
+  blog.year_link = ":year.html"
+  blog.month_link = ":year/:month.html"
+  blog.day_link = ":year/:month/:day.html"
+  blog.default_extension = ".md"
+
+  # blog.tag_template = "/cn/tag.html"
+  # blog.calendar_template = "/cn/calendar.html"
+
+  blog.paginate = true
+  blog.per_page = 5
+  blog.page_link = "page/:num"
+end
+
 ###
 # Compass
 ###
-require "zurb-foundation"
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact

@@ -9,5 +9,12 @@
     -# Stylesheets
     = stylesheet_link_tag 'application'
   %body{class: page_classes}
-    = yield
+    .header
+      = partial 'layouts/header'
+
+    .content
+      = yield
+
+    .footer
+      = partial 'layouts/footer'
     = javascript_include_tag 'application'

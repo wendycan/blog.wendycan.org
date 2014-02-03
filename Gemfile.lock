@@ -32,6 +32,8 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    maruku (0.6.1)
+      syntax (>= 1.0.0)
     middleman (3.2.2)
       coffee-script (~> 2.2.0)
       compass (>= 0.12.2)
@@ -42,6 +44,10 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.1.20)
       uglifier (~> 2.4.0)
+    middleman-blog (3.2.0)
+      maruku (~> 0.6.0)
+      middleman-core (~> 3.0)
+      tzinfo (~> 0.3.0)
     middleman-core (3.2.2)
       activesupport (~> 3.2.6)
       bundler (~> 1.1)
@@ -83,19 +89,19 @@ GEM
     sprockets-sass (1.0.2)
       sprockets (~> 2.0)
       tilt (~> 1.1)
+    syntax (1.2.0)
     thor (0.18.1)
     tilt (1.4.1)
+    tzinfo (0.3.38)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    zurb-foundation (4.3.2)
-      sass (>= 3.2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   middleman (~> 3.2.2)
+  middleman-blog (~> 3.2.0)
   middleman-livereload (~> 3.1.0)
   wdm (~> 0.1.0)
-  zurb-foundation
