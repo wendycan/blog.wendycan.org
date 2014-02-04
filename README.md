@@ -1,4 +1,4 @@
 blog.wendycan.org
 =================
 
-blog site
+wendycan's blog site
