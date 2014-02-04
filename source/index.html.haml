@@ -1,5 +1,18 @@
 ---
-title: Welcome to Wendycan
+pageable: true
 ---
 
-.home
+- content_for :title do
+  = "wendycan"
+.row
+  .articles.large-9.columns
+    - page_articles.each_with_index do |article, i|
+      - if i > 0
+        %hr/
+      = partial '/cn/article', :locals => {:article => article, :digest => true}
+
+  %aside.large-3.columns
+    %h4 标签
+    %ul.tags
+      - blog.tags.each do |tag, articles|
+        %li= link_to tag, tag_path(tag), :class => 'tiny button secondary round'
