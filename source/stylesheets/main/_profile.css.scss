@@ -1,0 +1,33 @@
+.profile{
+  .info{
+    p{
+      margin-bottom: 8px;
+    }
+  }
+  h3{
+    margin-bottom: 12px;
+  }
+  .projects{
+    .project{
+      padding: 20px;
+      background-color: $gray-bg;
+      height: 320px;
+    }
+    .skill{
+      margin-bottom: 5px;
+    }
+    .role{
+      margin-bottom: 5px;
+    }
+    .skill .label{
+      margin-bottom: 5px;
+    }
+    .name{
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      &:hover{
+        cursor: help;
+      }
+    }
+  }
+}

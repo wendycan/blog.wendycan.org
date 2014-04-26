@@ -5,7 +5,9 @@
 # git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore the install directory
-/vendor
+/vendor/ruby
+/vendor/assets/components
+!/vendor/assets/components/.keep
 
 # Ignore bundler config
 /.bundle

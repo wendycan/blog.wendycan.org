@@ -1,0 +1,14 @@
+.footer{
+  small, .reverse{
+    color: white;
+  }
+  .reverse:hover{
+    color: $primary;
+  }
+  i{
+    font-size: 2rem;
+  }
+  img{
+    width: 75%;
+  }
+}
