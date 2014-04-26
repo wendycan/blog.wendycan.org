@@ -1,12 +1,27 @@
-.container
-  .row
-    .large-6.columns
-      %ul.vcard
-        %li.fn Wendy Wang
-        %li.street-address Southeast University of China, Nan Jing, Jiang Su Province
-        %li.email
-          %a{:href => "#"} wendy@wendycan.org
-    .large-6.columns
-      %blockquote
-        Those people who think they know everything are a great annoyance to those of us who do.
-        %cite Issac Asimov
+.footer.wrap.gray-dark-bg
+  .row.text-center
+    .large-3.columns.large-offset-3
+      .row
+        .large-12.columns
+          %h4
+            %br
+            %small by
+            = link_to "王欣", 'http://wendycan.org/profile', :class => "reverse"
+      .row
+        .large-12.columns.small-8.small-centered
+          %ul.inline-list
+            %li
+              %a.reverse{:href => "http://weibo.com/u/3260368113/home?wvr=5"}
+                %i.fa.fa-weibo
+            %li
+              %a.reverse{:href => "https://github.com/wendycan"}
+                %i.fa.fa-github
+            %li
+              %a.reverse{:href => "https://bitbucket.org/wendycan"}
+                %i.fa.fa-bitbucket
+            %li
+              %a.reverse{:href => "mailto:wilxnwang@gmail.com"}
+                %i.fa.fa-envelope
+    .large-3.columns
+      = image_tag('qrcode.png')
+    .large-3.columns
