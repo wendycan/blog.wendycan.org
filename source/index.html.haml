@@ -11,8 +11,8 @@ pageable: true
         %hr/
       = partial '/cn/article', :locals => {:article => article, :digest => true}
 
-  %aside.large-3.columns
-    %h4 标签
-    %ul.tags
-      - blog.tags.each do |tag, articles|
-        %li= link_to tag, tag_path(tag), :class => 'tiny button secondary round'
+  / %aside.large-3.columns
+  /   %h4 标签
+  /   %ul.tags
+  /     - blog.tags.each do |tag, articles|
+  /       %li= link_to tag, tag_path(tag), :class => 'tiny button secondary round'

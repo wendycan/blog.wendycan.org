@@ -5,23 +5,35 @@
   .title-area{
     a{
       img{
-        height: 50px;
+        height: 40px;
         width: auto;
-        margin-top: -10px;
-        border-radius: 50%;
+        margin-left: 5px;
       }
       &:hover{
         opacity: 0.8;
       }
-      line-height: 80px;
-      padding-right: 20px;
+      line-height: 60px;
     }
   }
-  li a{
-    padding-left: 0 !important;
+  ul.right{
+    a{
+      font-size: 1.7rem;
+    }
+  }
+  ul.left{
+    a{
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding-left: 0 !important;
+    }
   }
 }
 .tab-bar img{
   height: 50px;
   width: auto;
+}
+.off-canvas-list{
+  li i{
+    padding-right: 15px;
+  }
 }
