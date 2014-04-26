@@ -1,0 +1,33 @@
+.show-for-medium-up
+  %nav.top-bar{:'data-topbar' => true}
+    %ul.title-area
+      %li.name
+        %h1
+          = link_to 'htttp://www.wendycan.org/profile' do
+            = image_tag("me.png")
+    %section.top-bar-section
+      %ul.right
+        %li
+          %a.default{:href => "htttp://www.wendycan.org"}
+            %i.fa.fa-home
+            首页
+        %li
+          = link_to 'htttp://www.wendycan.org/leavevs', :class => "default" do
+            %i.fa.fa-leaf
+            叶子拼图
+        %li
+          = link_to 'htttp://www.wendycan.org/temp', :class => "default" do
+            %i.fa.fa-bar-chart-o
+            温度监控
+        %li
+          = link_to 'htttp://www.wendycan.org/projects', :class => "default" do
+            %i.fa.fa-th-large
+            所有项目
+        %li
+          = link_to 'htttp://www.wendycan.org/profile', :class => "default" do
+            %i.fa.fa-user
+            简历
+        %li
+          %a.default{:href => "http://blog.wendycan.org"}
+            %i.fa.fa-bookmark
+            阅台

@@ -12,12 +12,24 @@
     -# Stylesheets
     = stylesheet_link_tag 'application'
   %body{class: page_classes}
-    .header
-      = partial 'layouts/header'
+    .off-canvas-wrap{:'data-offcanvas' => true}
+      = partial "layouts/nav"
+      .inner-wrap
+        = partial "layouts/small_nav"
 
-    .content
-      = yield
+        .content
+          = yield
 
-    .footer
-      = partial 'layouts/footer'
+        .footer
+          = partial 'layouts/footer'
+        %a.exit-off-canvas
+
+    / .header
+    /   = partial 'layouts/header'
+
+    / .content
+    /   = yield
+
+    / .footer
+    /   = partial 'layouts/footer'
     = javascript_include_tag 'application'
