@@ -3,12 +3,16 @@
     .large-3.columns.large-offset-3
       .row
         .large-12.columns
-          %h4
-            %br
-            %small by
-            = link_to "王欣", 'http://wendycan.org/profile', :class => "reverse"
+          %h5
+            = '欢迎大家投稿至'
+            %a{:href => "mailto:yuetai@wendycan.org"}
+              %small.reverse yuetai@wendycan.org
+      %hr
       .row
         .large-12.columns.small-8.small-centered
+          %h5
+            %small by
+            = link_to "WendyCan", 'http://wendycan.org', :class => "reverse"
           %ul.inline-list
             %li
               %a.reverse{:href => "http://weibo.com/u/3260368113/home?wvr=5"}
@@ -20,7 +24,7 @@
               %a.reverse{:href => "https://bitbucket.org/wendycan"}
                 %i.fa.fa-bitbucket
             %li
-              %a.reverse{:href => "mailto:wilxnwang@gmail.com"}
+              %a.reverse{:href => "mailto:wendy@wendycan.org"}
                 %i.fa.fa-envelope
     .large-3.columns
       = image_tag('qrcode.png')

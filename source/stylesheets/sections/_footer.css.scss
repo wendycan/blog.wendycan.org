@@ -1,4 +1,12 @@
 .footer{
+  h5{
+    color: white;
+  }
+  hr{
+    color: $gray-border;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   small, .reverse{
     color: white;
   }
