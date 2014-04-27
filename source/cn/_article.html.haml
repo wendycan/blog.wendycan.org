@@ -7,14 +7,15 @@
         - else
           = article.title
       .article-meta
+        %p.date
+          %span.label.secondary.radius= article.date.strftime('%Y - %m - %d')
         / .credit
         /   %i.icon-calendar
         /   = date_links article.date
         / = article.authors
         %ul.tags.inline-list
           - article.tags.each do |tag|
-            %li= link_to tag ,tag_path(tag), :class => 'tiny button secondary round'
-        .clear
+            %li= link_to tag ,tag_path(tag), :class => 'label round'
       - if digest
         = article.summary
       - else
