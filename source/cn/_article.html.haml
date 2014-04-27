@@ -1,21 +1,31 @@
-.row
-  .large-9.columns.articles
-    - page_articles.each_with_index do |article, i|
-      - if i > 0
-        %hr/
-      = partial '/cn/article_content', :locals => {:article => article, :digest => true}
-  .large-3.columns
-    = partial '/cn/sidebar'
-.row
-  .ds-thread{:'data-thread-key' => '', :'data-title' => '', :'data-url' => ''}
+.article.wrap
+  .row
+    .large-12.columns
+      %h3
+        - if digest
+          = link_to article.title, article
+        - else
+          = article.title
+      .article-meta
+        / .credit
+        /   %i.icon-calendar
+        /   = date_links article.date
+        / = article.authors
+        %ul.tags.inline-list
+          - article.tags.each do |tag|
+            %li= link_to tag ,tag_path(tag), :class => 'tiny button secondary round'
+        .clear
+      - if digest
+        = article.summary
+      - else
+        = article.body
 
-:javascript
-  var duoshuoQuery = {short_name:"wendycan"};
-      (function() {
-          var ds = document.createElement('script');
-          ds.type = 'text/javascript';ds.async = true;
-          ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
-          ds.charset = 'UTF-8';
-          (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
+      - if digest && article.summary.length < article.body.length
+        %p.readmore
+          = link_to '鏇村 &rarr;', article.url, :class => 'secondary button radius'
+    / - unless digest
+    /   %ul.read_next
+    /     %li
+    /       = article.previous_article ? link_to("<i class='icon-caret-left'></i> #{article.previous_article.title}", article.previous_article) : "&nbsp;"
+    /     %li
+    /       = article.next_article ? link_to("#{article.next_article.title} <i class='icon-caret-right'></i>", article.next_article) : "&nbsp;"

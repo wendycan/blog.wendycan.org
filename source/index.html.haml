@@ -3,12 +3,12 @@ pageable: true
 ---
 
 - content_for :title do
-  = "wendycan"
+  = "阅台"
 .row
   .large-9.columns.articles
     - page_articles.each_with_index do |article, i|
       - if i > 0
         %hr/
-      = partial '/cn/article_content', :locals => {:article => article, :digest => true}
+      = partial '/cn/article', :locals => {:article => article, :digest => true}
   .large-3.columns
     = partial '/cn/sidebar'
