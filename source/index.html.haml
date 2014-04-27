@@ -5,14 +5,10 @@ pageable: true
 - content_for :title do
   = "wendycan"
 .row
-  .articles.large-9.columns
+  .large-9.columns.articles
     - page_articles.each_with_index do |article, i|
       - if i > 0
         %hr/
-      = partial '/cn/article', :locals => {:article => article, :digest => true}
-
-  / %aside.large-3.columns
-  /   %h4 标签
-  /   %ul.tags
-  /     - blog.tags.each do |tag, articles|
-  /       %li= link_to tag, tag_path(tag), :class => 'tiny button secondary round'
+      = partial '/cn/article_content', :locals => {:article => article, :digest => true}
+  .large-3.columns
+    = partial '/cn/sidebar'

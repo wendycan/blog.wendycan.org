@@ -11,7 +11,7 @@ activate :blog do |blog|
   blog.prefix = "/cn"
   blog.permalink = ":year/:month/:day/:title.html"
   blog.sources = ":year-:month-:day-:title.html"
-  blog.taglink = "tags/:tag.html"
+  blog.taglink = "tags/tag.html"
   blog.layout = "article"
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
@@ -20,7 +20,7 @@ activate :blog do |blog|
   blog.day_link = ":year/:month/:day.html"
   blog.default_extension = ".md"
 
-  # blog.tag_template = "/cn/tag.html"
+  blog.tag_template = "/cn/tag.html"
   # blog.calendar_template = "/cn/calendar.html"
 
   blog.paginate = true
