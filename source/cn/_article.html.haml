@@ -15,7 +15,8 @@
         / = article.authors
         %ul.tags.inline-list
           - article.tags.each do |tag|
-            %li= link_to tag ,tag_path(tag), :class => 'label round'
+            %li= link_to tag ,'#', :class => 'label round'
+            / %li= link_to tag ,tag_path(tag), :class => 'label round'
       - if digest
         = article.summary
       - else
