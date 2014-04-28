@@ -23,8 +23,8 @@
     = article.body
 
   - if digest && article.summary.length < article.body.length
-    %p.readmore
-      = link_to article.url, :class => 'secondary button radius' do
+    %p.readmore.text-right
+      = link_to article.url, :class => 'secondary button tiny radius' do
         = '更多'
         %i.fa.fa-long-arrow-right
     / - unless digest
