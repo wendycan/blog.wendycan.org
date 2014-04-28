@@ -17,14 +17,16 @@
           - article.tags.each do |tag|
             %li= link_to tag ,'#', :class => 'label round'
             / %li= link_to tag ,tag_path(tag), :class => 'label round'
-      - if digest
-        = article.summary
-      - else
-        = article.body
+  - if digest
+    = article.summary
+  - else
+    = article.body
 
-      - if digest && article.summary.length < article.body.length
-        %p.readmore
-          = link_to '鏇村 &rarr;', article.url, :class => 'secondary button radius'
+  - if digest && article.summary.length < article.body.length
+    %p.readmore
+      = link_to article.url, :class => 'secondary button radius' do
+        = '更多'
+        %i.fa.fa-long-arrow-right
     / - unless digest
     /   %ul.read_next
     /     %li
