@@ -17,19 +17,21 @@
           - article.tags.each do |tag|
             %li= link_to tag ,'#', :class => 'label round'
             / %li= link_to tag ,tag_path(tag), :class => 'label round'
-  - if digest
-    = article.summary
-  - else
-    = article.body
+  .row
+    .large-12.columns
+      - if digest
+        = article.summary
+      - else
+        = article.body
 
-  - if digest && article.summary.length < article.body.length
-    %p.readmore.text-right
-      = link_to article.url, :class => 'secondary button tiny radius' do
-        = '更多'
-        %i.fa.fa-long-arrow-right
-    / - unless digest
-    /   %ul.read_next
-    /     %li
-    /       = article.previous_article ? link_to("<i class='icon-caret-left'></i> #{article.previous_article.title}", article.previous_article) : "&nbsp;"
-    /     %li
-    /       = article.next_article ? link_to("#{article.next_article.title} <i class='icon-caret-right'></i>", article.next_article) : "&nbsp;"
+      - if digest && article.summary.length < article.body.length
+        %p.readmore.text-right
+          = link_to article.url, :class => 'secondary button tiny radius' do
+            = '更多'
+            %i.fa.fa-long-arrow-right
+        / - unless digest
+        /   %ul.read_next
+        /     %li
+        /       = article.previous_article ? link_to("<i class='icon-caret-left'></i> #{article.previous_article.title}", article.previous_article) : "&nbsp;"
+        /     %li
+        /       = article.next_article ? link_to("#{article.next_article.title} <i class='icon-caret-right'></i>", article.next_article) : "&nbsp;"
