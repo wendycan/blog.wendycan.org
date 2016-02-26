@@ -3,6 +3,6 @@ blog.wendycan.org
 
 ## Dependency
 
-middleman
+* Middleman
 
 wendycan's blog site
